@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        #root {
+            display: flex;
+        }
+
+        @keyframes letter-color {
+            0% {
+                color: white;
+            }
+
+            15% {
+                color: greenyellow;
+            }
+
+            20% {
+                color: green;
+            }
+
+            30% {
+                color: black;
+            }
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <svg width="30" height="100">
+        <defs>
+          <mask id="mask" x="0" y="0" width="30" height="100">
+            <rect x="0" y="0" width="30" height="100" fill="#ccc"/>
+            <text text-anchor="middle" x="12" y="6" dy="1">T</text>
+            <text text-anchor="middle" x="12" y="23" dy="1">E</text>
+            <text text-anchor="middle" x="12" y="41" dy="1">S</text>
+            <text text-anchor="middle" x="12" y="59" dy="1">T</text>
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="30" height="100" mask="url(#mask)" fill-opacity="0.5"/>    
+      </svg>
+    <script src="single-letter-solution.js"></script>
+</body>
+
+</html>
